@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticket Assignment - Ticketfy</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f7;
+      margin: 0;
+      padding: 0;
+    }
+    .email-wrapper {
+      width: 100%;
+      background-color: #f4f4f7;
+      padding: 20px 0;
+    }
+    .email-content {
+      max-width: 600px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 6px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .email-header {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .email-header h1 {
+      color: #1a73e8;
+      margin: 0;
+    }
+    .email-body {
+      color: #333333;
+      line-height: 1.6;
+    }
+    .email-body ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .email-body li {
+      margin-bottom: 10px;
+    }
+    .email-body strong {
+      display: inline-block;
+      width: 90px;
+    }
+    .email-footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #999999;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="email-content">
+      <div class="email-header">
+        <h1>Ticketfy</h1>
+        <p><em>Your trusted ticketing partner</em></p>
+      </div>
+      <div class="email-body">
+        <p>Dear {{ agent_name }},</p>
+
+        <p>
+          You have been assigned a new support ticket. Below are the details:
+        </p>
+
+        <ul>
+          <li><strong>Title:</strong> {{ ticket_title }}</li>
+          <li><strong>Priority:</strong> {{ ticket_priority }}</li>
+          <li><strong>Description:</strong> {{ ticket_description }}</li>
+        </ul>
+
+        <p>
+          Please address this ticket at your earliest convenience. You can log into your Ticketfy dashboard to update its status or take action.
+        </p>
+
+        <p>
+          Thank you,<br />
+          <strong>The Ticketfy Team</strong>
+        </p>
+      </div>
+
+      <div class="email-footer">
+        &copy; {{ current_year }} Ticketfy. All rights reserved.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
