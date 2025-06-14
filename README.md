@@ -55,8 +55,8 @@ This automated ticket assignment system provides:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd ticket-management-system
+   git clone https://github.com/mutungapeter/Automated-ticketing-system.git
+   cd Automated-ticketing-system
    ```
 
 2. **Navigate to backend directory**
