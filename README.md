@@ -108,7 +108,9 @@ This automated ticket assignment system provides:
    python manage.py runserver
    ```
 
-   The backend will be available at `http://localhost:8000`
+   The backend will be available at `http://localhost:8000
+    You can visit http://localhost:8000/apis/swagger, to interact with the endpoints via swagger documentation`
+   
 
 ### Frontend Setup
 
