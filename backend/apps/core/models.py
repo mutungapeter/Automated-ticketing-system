@@ -41,6 +41,7 @@ class Ticket(AbsoluteBaseModel):
         ("open", "Open"),
         ("in_progress", "In Progress"),
         ("closed", "Closed"),
+        ("Unassigned", "Unassigned"),
     ]
     title = models.CharField(max_length=255)
     description = models.TextField()

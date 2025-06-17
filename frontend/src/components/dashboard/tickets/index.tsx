@@ -100,7 +100,7 @@ const Tickets = () => {
       accessor: "assigned_agent",
       cell: (item: TicketType) => (
         <span>
-          <span className="text-sm normal">{item.assigned_agent.first_name}{item.assigned_agent.last_name}</span>
+          <span className="text-sm normal">{item?.assigned_agent?.first_name}{item?.assigned_agent?.last_name}</span>
         </span>
       ),
     },
@@ -109,7 +109,7 @@ const Tickets = () => {
       accessor: "assigned_agent",
       cell: (item: TicketType) => (
         <span>
-          <span className="text-sm normal">{item.assigned_agent.level}</span>
+          <span className="text-sm normal">{item?.assigned_agent?.level}</span>
         </span>
       ),
     },
