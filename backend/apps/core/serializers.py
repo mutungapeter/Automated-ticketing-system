@@ -5,6 +5,7 @@ class AgentCreateAndUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Agent
         fields = ["first_name", "email", "last_name", "gender", "level"]
+    
 class AgentSerializer(serializers.ModelSerializer):
     assigned_ticket_count = serializers.SerializerMethodField()
     class Meta:

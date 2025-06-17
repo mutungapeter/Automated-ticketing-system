@@ -325,7 +325,7 @@ const Register = () => {
               <div className="mt-3 flex items-center justify-center space-x-3">
                 <p className="text-gray-600 text-xs">Already have an account?</p>
                 <Link
-                  href="/accounts/login"
+                  href="/"
                   className="text-primary cursor-pointer font-semibold text-xs"
                 >
                   Login

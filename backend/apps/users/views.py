@@ -24,6 +24,19 @@ class UserLoginAPIView(TokenObtainPairView):
 class RegisterAdminAccountAPIView(generics.CreateAPIView):
     serializer_class = CreateAdminAccountSerializer
     permission_classes = [AllowAny]
+    def create(self, request, *args, **kwargs):
+        username = request.data.get("username")
+        if User.objects.filter(username=username).exists():
+            return Response(
+                {"error": "User with the Username already exists."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 class UserLogoutAPIView(APIView):
     permission_classes = [IsAuthenticated]

@@ -179,7 +179,7 @@ const Login = () => {
               <div className="mt-4 flex  items-center justify-center space-x-3">
                 <p className="text-gray-600">Don&apos;t have account?</p>
                 <Link
-                  href="/accounts/register"
+                  href="/register"
                   className="text-primary cursor-pointer font-semibold"
                 >
                   Register
